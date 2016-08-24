@@ -8,12 +8,12 @@ FOLDER_NAME_WIKI=mediawiki
 FOLDER_WIKI=mediawiki/
 FOLDER_WEB=/var/www/html/
 
-#Téléchargement et extraction des sources de GLPI
+#Check if MediaWiki is already installed by check folder
 if [ "$(ls ${FOLDER_WEB}${FOLDER_WIKI})" ];
 then
 	echo "MediaWiki is already installed"
 else
-	#Download Mediwiki and change owner
+	#Download MediaWiki and change owner
 	wget -P ${FOLDER_WEB} ${SRC_WIKI}
 	tar -xzf ${FOLDER_WEB}${TAR_WIKI} -C ${FOLDER_WEB}
 	rm -Rf ${FOLDER_WEB}${TAR_WIKI}
