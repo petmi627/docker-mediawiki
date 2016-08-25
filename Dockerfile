@@ -1,4 +1,3 @@
-
 #On choisit Debian
 FROM debian:latest
 
@@ -16,6 +15,13 @@ php5-ldap \
 php5-xcache \
 imagemagick \
 php5-imagick \
-git \
+wget \
+git
 
-#Changer les droits en 544 du dossier /var/www/html/mediawiki/images/
+#Copy and run mediwiki start script
+COPY wiki-start.sh /opt
+RUN chmod +x /opt/wiki-start.sh
+ENTRYPOINT ["/opt/wiki-start.sh"]
+
+#Ports
+EXPOSE 80 443
