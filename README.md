@@ -1,5 +1,8 @@
 # Project to deploy Mediawiki with docker
 
+[![](https://images.microbadger.com/badges/version/diouxx/mediawiki.svg)](http://microbadger.com/images/diouxx/mediawiki "Get your own version badge on microbadger.com")
+[![](https://images.microbadger.com/badges/image/diouxx/mediawiki.svg)](http://microbadger.com/images/diouxx/mediawiki "Get your own image badge on microbadger.com")
+
 Install and run an Mediawiki instance with docker
 
 ## Deploy Mediawiki without database
