@@ -8,6 +8,13 @@ FOLDER_NAME_WIKI=mediawiki
 FOLDER_WIKI=mediawiki/
 FOLDER_WEB=/var/www/html/
 
+#check if TLS_REQCERT is present
+if !(grep -q "TLS_REQCERT" /etc/ldap/ldap.conf)
+then
+	echo "TLS_REQCERT isn't present"
+        echo -e "TLS_REQCERT\tnever" >> /etc/ldap/ldap.conf
+fi
+
 #Check if MediaWiki is already installed by check folder
 if [ "$(ls ${FOLDER_WEB}${FOLDER_WIKI})" ];
 then
