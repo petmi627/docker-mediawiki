@@ -16,6 +16,7 @@ php5-xcache \
 imagemagick \
 php5-imagick \
 wget \
+python-pygments \
 git
 
 #Copy and run mediwiki start script
