@@ -31,7 +31,7 @@ else
 	chown -R 544 ${FOLDER_WEB}${FOLDER_WIKI}/images
 
 	#Modify default apache virtualhost
-	echo -e "<VirtualHost *:80>\n\tDocumentRoot ${FOLDER_WEB}${FOLDER_NAME_WIKI}\n\n\t<Directory ${FOLDER_WEB}${FOLDER_NAME_WIKI}>\n\t\tAllowOverride All\n\t\tOrder Allow,Deny\n\t\tAllow from all\n\t</Directory>\n\n\tErrorLog /var/log/apache2/error-${FOLDER_NAME_WIKI}.log\n\tLogLevel warn\n\tCustomLog /var/log/apache2/acces-${FOLDER_NAME_WIKI}.log combined\n</VirtualHost>" > /etc/apache2/sites-available/000-default.conf
+	echo -e "<VirtualHost *:80>\n\tDocumentRoot ${FOLDER_WEB}${FOLDER_NAME_WIKI}\n\n\t<Directory ${FOLDER_WEB}${FOLDER_NAME_WIKI}>\n\t\tAllowOverride All\n\t\tOrder Allow,Deny\n\t\tAllow from all\n\t</Directory>\n\n\tErrorLog /var/log/apache2/error-${FOLDER_NAME_WIKI}.log\n\tLogLevel warn\n\tCustomLog /var/log/apache2/access-${FOLDER_NAME_WIKI}.log combined\n</VirtualHost>" > /etc/apache2/sites-available/000-default.conf
 
 	#Enable rewrite module
 	a2enmod rewrite && service apache2 restart && service apache2 stop
