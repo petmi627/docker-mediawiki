@@ -15,7 +15,7 @@ docker run --name wiki -p 80:80 -d diouxx/mediawiki
 docker run --name wiki --link some-mysql:mysql -p 80:80 -d diouxx/mediawiki
 ```
 
-## Deploy Mediawiki with database and persitance container data (Recommended)
+## Deploy Mediawiki with database and persistance container data (Recommended)
 
 For an usage on production environnement or daily usage, it's recommanded to use a data container for persistent data.
 
