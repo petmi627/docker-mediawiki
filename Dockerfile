@@ -9,12 +9,12 @@ ENV DEBIAN_FRONTEND noninteractive
 RUN apt update \
 && apt -y install \
 apache2 \
-php5 \
-php5-mysql \
-php5-ldap \
-php5-xcache \
+php \
+php-mysql \
+php-ldap \
+php-xcache \
 imagemagick \
-php5-imagick \
+php-imagick \
 wget \
 python-pygments \
 git
