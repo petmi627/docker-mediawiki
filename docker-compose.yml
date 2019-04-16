@@ -1,35 +1,26 @@
-#Mysql Persitance data
-mysql-data:
-  image: busybox
-  container_name: mysql-data
-  volumes:
-    - /var/lib/mysql:/var/lib/mysql
+version: "3.2"
 
-#Mysql container
-mysql:
-  image: mysql
-  container_name: mysql
-  hostname: mysql
-  volumes_from:
-    - mysql-data
-  env_file:
-    - ./mysql.env
+services:
+#Mysql Container
+  mysql:
+    image: mysql:5.7.23
+    container_name: mysql
+    hostname: mysql
+    volumes:
+      - /var/lib/mysql:/var/lib/mysql
+    env_file:
+      - ./mysql.env
+    restart: always
 
-#Mediawiki Persistance data
-wiki-data:
-  image: busybox
-  container_name: wiki-data
-  volumes:
-    - /var/www/html/wiki:/var/www/html/wiki
-
-#Mediawiki container
-wiki:
-  image: diouxx/mediawiki
-  container_name: wiki
-  hostname: wiki
-  ports:
-    - 80:80
-  links:
-    - mysql:mysql
-  volumes_from:
-    - wiki-data
+#Mediawiki Container
+  mediawiki:
+    image: diouxx/mediawiki
+    container_name : wiki
+    hostname: wiki
+    ports:
+      - "80:80"
+    volumes:
+      - /etc/timezone:/etc/timezone:ro
+      - /etc/localtime:/etc/localtime:ro
+      - /var/www/html/wiki/:/var/www/html/wiki
+    restart: always
