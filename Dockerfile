@@ -12,9 +12,12 @@ apache2 \
 php \
 php-mysql \
 php-ldap \
-php-xcache \
+php-apcu \
 imagemagick \
 php-imagick \
+php-gd \
+php-curl \
+php-intl\
 wget \
 python-pygments \
 git
