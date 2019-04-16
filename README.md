@@ -28,9 +28,9 @@ docker run --name mediawiki --link mysql:mysql -p 80:80 -d diouxx/mediawiki
 docker run --name wiki --link yourdatabase:mysql -p 80:80 -d diouxx/mediawiki
 ```
 
-## Deploy Mediawiki with database and persistence container data
+## Deploy Mediawiki with database and persistence data
 
-For an usage on production environnement or daily usage, it's recommanded to use a data container for persistent data.
+For an usage on production environnement or daily usage, it's recommanded to use container with volume to persistent data.
 
 * First, create MySQL container with volume
 
