@@ -17,7 +17,7 @@ imagemagick \
 php-imagick \
 php-gd \
 php-curl \
-php-intl\
+php-intl \
 wget \
 python-pygments \
 git
