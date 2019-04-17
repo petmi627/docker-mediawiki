@@ -1,4 +1,5 @@
 # Project to deploy Mediawiki with docker
+
 - [Project to deploy Mediawiki with docker](#project-to-deploy-mediawiki-with-docker)
 - [Introduction](#introduction)
 - [Deploy with CLI](#deploy-with-cli)
