@@ -22,13 +22,12 @@ then
 else
 	#Download MediaWiki and change owner
 	wget -P ${FOLDER_WEB} ${SRC_WIKI}
-	tar -xzf ${FOLDER_WEB}${TAR_WIKI} -C ${FOLDER_WEB}
+	tar -xzf ${FOLDER_WEB}${TAR_WIKI} -C ${FOLDER_WEB} --transform s/mediawiki-${VERSION_MAJOR_WIKI}.${VERSION_MINOR_WIKI}/${FOLDER_NAME_WIKI}/
 	rm -Rf ${FOLDER_WEB}${TAR_WIKI}
-	mv ${FOLDER_WEB}${FOLDER_NAME_WIKI}-${VERSION_MAJOR_WIKI}.${VERSION_MINOR_WIKI} ${FOLDER_WEB}${FOLDER_NAME_WIKI}
 	chown -R www-data:www-data ${FOLDER_WEB}${FOLDER_NAME_WIKI}
 
 	#Change permission on images folder
-	chown -R 544 ${FOLDER_WEB}${FOLDER_WIKI}/images
+	chown -R 544 ${FOLDER_WEB}${FOLDER_WIKI}images
 
 fi
 

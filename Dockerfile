@@ -18,6 +18,8 @@ php-imagick \
 php-gd \
 php-curl \
 php-intl \
+php-mbstring \
+php-xml \
 wget \
 python-pygments \
 git
@@ -25,6 +27,7 @@ git
 #Copy and run mediwiki start script
 COPY wiki-start.sh /opt
 RUN chmod +x /opt/wiki-start.sh
+#WORKDIR /var/www/html
 ENTRYPOINT ["/opt/wiki-start.sh"]
 
 #Ports
