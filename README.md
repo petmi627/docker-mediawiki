@@ -1,11 +1,13 @@
 # Project to deploy Mediawiki with docker
 
+![Docker Pulls](https://img.shields.io/docker/pulls/diouxx/mediawiki) ![Docker Stars](https://img.shields.io/docker/stars/diouxx/mediawiki) [![](https://images.microbadger.com/badges/image/diouxx/mediawiki.svg)](https://microbadger.com/images/diouxx/mediawiki "Get your own image badge on microbadger.com") ![Docker Automated build](https://img.shields.io/docker/automated/diouxx/mediawiki)
+
 - [Project to deploy Mediawiki with docker](#project-to-deploy-mediawiki-with-docker)
 - [Introduction](#introduction)
 - [Deploy with CLI](#deploy-with-cli)
   - [Deploy Mediawiki](#deploy-mediawiki)
   - [Deploy Mediawiki with existing database](#deploy-mediawiki-with-existing-database)
-  - [Deploy Mediawiki with database and persistence container data](#deploy-mediawiki-with-database-and-persistence-container-data)
+  - [Deploy Mediawiki with database and persistence data](#deploy-mediawiki-with-database-and-persistence-data)
 - [Deploy with docker-compose](#deploy-with-docker-compose)
   - [Deploy without persistence data ( for quickly test )](#deploy-without-persistence-data--for-quickly-test)
   - [Deploy with persistence data](#deploy-with-persistence-data)

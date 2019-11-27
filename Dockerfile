@@ -1,5 +1,5 @@
 #On choisit Debian
-FROM debian:latest
+FROM debian:10.2
 
 MAINTAINER DiouxX "github@diouxx.be"
 
