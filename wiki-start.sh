@@ -1,6 +1,6 @@
 #!/bin/bash
 
-VERSION_MAJOR_WIKI=1.28
+VERSION_MAJOR_WIKI=1.34
 VERSION_MINOR_WIKI=1
 SRC_WIKI=https://releases.wikimedia.org/mediawiki/${VERSION_MAJOR_WIKI}/mediawiki-${VERSION_MAJOR_WIKI}.${VERSION_MINOR_WIKI}.tar.gz
 TAR_WIKI=mediawiki-${VERSION_MAJOR_WIKI}.${VERSION_MINOR_WIKI}.tar.gz
