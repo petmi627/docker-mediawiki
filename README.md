@@ -121,7 +121,7 @@ services:
     volumes:
       - /etc/timezone:/etc/timezone:ro
       - /etc/localtime:/etc/localtime:ro
-      - /var/www/html/wiki/:/var/www/html/wiki
+      - /var/www/html/mediawiki/:/var/www/html/mediawiki
     restart: always
 ```
 
